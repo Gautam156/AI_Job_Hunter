@@ -1,0 +1,13 @@
+{
+  "name": "ai-job-hunter-backend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "openai": "^4.55.0",
+    "stripe": "^16.0.0",
+    "micro": "^9.4.1",
+    "micro-cors": "^0.1.1",
+    "node-fetch": "^3.3.2"
+  }
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Job Hunter — Profile</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; max-width: 720px; margin: 24px auto; padding: 0 12px; }
+    h1 { font-size: 20px; }
+    label { display:block; margin-top: 12px; }
+    input, textarea { width: 100%; padding: 8px; border-radius: 8px; border:1px solid #e5e7eb; }
+    .row { margin-top: 12px; }
+    button { background:#2563eb; color:white; border:none; border-radius:8px; padding:8px 12px; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <h1>Profile</h1>
+  <p>Upload your resume and basic info. This data is stored locally in your browser via chrome.storage.</p>
+
+  <label>Full Name
+    <input id="name" placeholder="Your name" />
+  </label>
+
+  <label>Email
+    <input id="email" placeholder="you@example.com" />
+  </label>
+
+  <label>Phone
+    <input id="phone" placeholder="+91 99999 99999" />
+  </label>
+
+  <label>Skills (comma separated)
+    <input id="skills" placeholder="JavaScript, React, Node" />
+  </label>
+
+  <label>Experience (summary)
+    <textarea id="experience" rows="5" placeholder="Brief summary of experience"></textarea>
+  </label>
+
+  <div class="row">
+    <label>Resume (PDF/DOC)
+      <input type="file" id="resume" accept=".pdf,.doc,.docx" />
+    </label>
+  </div>
+
+  <div class="row">
+    <button id="save">Save Profile</button>
+  </div>
+
+  <script type="module" src="./profile.js"></script>
+</body>
+</html>

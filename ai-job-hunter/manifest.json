@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "AI Job Hunter",
+  "version": "2.0.0",
+  "description": "Find jobs from your resume, autofill applications, and generate tailored cover letters.",
+  "action": {
+    "default_title": "AI Job Hunter",
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "background": {
+    "service_worker": "scripts/background.js",
+    "type": "module"
+  },
+  "options_page": "options/options.html",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "identity",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
