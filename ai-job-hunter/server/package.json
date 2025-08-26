@@ -1,13 +1,17 @@
 {
-  "name": "ai-job-hunter-backend",
-  "private": true,
+  "name": "ai-job-hunter-server",
   "version": "1.0.0",
-  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "node index.js"
+  },
   "dependencies": {
-    "openai": "^4.55.0",
-    "stripe": "^16.0.0",
-    "micro": "^9.4.1",
-    "micro-cors": "^0.1.1",
-    "node-fetch": "^3.3.2"
+    "openai": "^4.0.0",
+    "node-fetch": "^3.3.2",
+    "stripe": "^12.0.0"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
